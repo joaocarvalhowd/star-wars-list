@@ -1,6 +1,6 @@
 # Star Wars - Characters List
 
-> code challenge
+> code challenge - [DEMO](https://mira-education-star-wars.firebaseapp.com/)
 
 ## Introduction
 
