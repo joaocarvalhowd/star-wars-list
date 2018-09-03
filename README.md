@@ -32,6 +32,7 @@ Some unit test has been created:
 - _actions/loading
 - _services/characters
 - characters-item
+- characters-list
 - pagination
 - loading
 
