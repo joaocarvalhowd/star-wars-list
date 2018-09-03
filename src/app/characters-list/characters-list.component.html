@@ -1,0 +1,10 @@
+<div class="characters">
+  <app-loading class="characters__loading"></app-loading>
+
+  <ul class="characters__list" *ngIf="!isActive">
+    <app-characters-item [character]="character" *ngFor="let character of characters"></app-characters-item>
+  </ul>
+
+  <app-pagination [nextUrl]="nextUrl" [prevUrl]="prevUrl" *ngIf="!isActive" (changedPage)="getCharacters($event)">
+  </app-pagination>
+</div>

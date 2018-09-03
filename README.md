@@ -1,27 +1,39 @@
-# StarWarsList
+# Star Wars - Characters List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+> code challenge
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project is a code challenge that has been developed with [Angular](https://angular.io/), 
+[@angular/pwa](https://www.npmjs.com/package/@angular/pwa) and [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md)
 
-## Code scaffolding
+**It basically:**
+* Fetch characters from [API](https://swapi.co/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Image](https://imgur.com/Epak0v8.png)
 
-## Build
+## Install
+- Clone the project: `git clone git@github.com:joaocarvalhowd/star-wars-list.git`
+- Go to project's folder: `cd star-wars-list`
+- Install dependencies: `npm i` or `yarn`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
+To see this project running locally:
+- Execute `npm run start` or `yarn start`
+- Access [localhost:4200](http://localhost:4200)
 
-## Running unit tests
+## Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Some unit test has been created:
 
-## Running end-to-end tests
+- _pipes/id-character
+- _pipes/id-character(integrated)
+- _reducers/loading
+- _actions/loading
+- _services/characters
+- characters-item
+- pagination
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Execute tests
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`npm test` or `yarn test`

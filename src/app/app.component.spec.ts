@@ -1,27 +1,41 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ContainerComponent } from './container/container.component';
+import { HeaderComponent } from './header/header.component';
+import { CharactersListComponent } from './characters-list/characters-list.component';
+import { LoadingComponent } from './loading/loading.component';
+import { CharactersItemComponent } from './characters-item/characters-item.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { IdCharacterPipe } from './_pipes/id-character.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './_reducers/loading.reducer';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        IdCharacterPipe,
+        AppComponent,
+        ContainerComponent,
+        HeaderComponent,
+        CharactersListComponent,
+        LoadingComponent,
+        CharactersItemComponent,
+        PaginationComponent
+      ],
+      imports: [
+        HttpClientModule,
+        StoreModule.forRoot({
+          loading: reducer
+        })
       ],
     }).compileComponents();
   }));
+
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'star-wars-list'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('star-wars-list');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to star-wars-list!');
   }));
 });

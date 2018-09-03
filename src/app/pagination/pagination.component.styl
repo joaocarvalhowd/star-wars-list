@@ -1,0 +1,28 @@
+@import "~src/app/styles/base/_variables"
+
+.pagination
+  display grid
+  grid-column-gap $gap
+  grid-template-columns 1fr 1fr
+  padding 10px 20px
+  border-radius 0 0 4px 4px
+  background #fff
+  box-shadow 0 -10px 10px -10px rgba(0,0,0,0.16)
+
+  &__next, &__prev
+    line-height 40px
+    font-size 1.05em
+    display block
+    width 100%
+    border none
+    background $red
+    color #fff
+    font-weight 700
+    text-transform uppercase
+    cursor pointer
+
+    &:disabled
+      background rgba($default, 0.8)
+      pointer-events none
+      cursor none
+
