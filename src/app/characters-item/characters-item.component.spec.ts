@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CharactersItemComponent } from './characters-item.component';
 import { IdCharacterPipe } from '../_pipes/id-character.pipe';
 import { DebugElement } from '@angular/core';
-import {By} from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 
 describe('CharactersItemComponent', () => {
   let fixture: ComponentFixture<CharactersItemComponent>;

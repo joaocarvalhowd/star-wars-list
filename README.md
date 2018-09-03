@@ -33,6 +33,7 @@ Some unit test has been created:
 - _services/characters
 - characters-item
 - pagination
+- loading
 
 ### Execute tests
 
